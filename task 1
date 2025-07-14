@@ -14,7 +14,7 @@ clear
 
 #  SMSNO="+1(888) 222-8888"                    									<<< 	USA cell phone number of the person who will receive SMS alerts and most setup messages
 
-#  SLACK="https://hooks.slack.com/services/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"  			<<< 	Your slack webhook. This is a fake example, but the format us consistent with a webhook ...
+#  SLACK="https://hooks.slack.com/services/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"  			<<< 	Your slack webhook. This is a fake example, but the format us consistent with a webhook ...
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  Add your details here
