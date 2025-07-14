@@ -1,1 +1,15 @@
+#  ---------------------------------------------------------------------------------------------------------
+#  TESTING YOUR ACCOUNT ALERTS
+#  ---------------------------------------------------------------------------------------------------------
+
+# How-to guide on alerts testing
+
+
+1. Makes sure you have confirmation of task 2 before proceeding. It is helpful to have slack and sms open before testing. 
+
+2. Go to AWS lambdas. Create two test lambdas. On the function lage, press test. 
+
+3. Press "TEST" button 5 times in ten seconds. Repeat this for the other lambda.
+
+4. In two to four minutes, your alerts should appear.
 
