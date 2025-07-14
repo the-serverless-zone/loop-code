@@ -1,5 +1,5 @@
 #  ---------------------------------------------------------------------------------------------------------
-# CHANGING THE NUMBER OF INVOCATIONS PER MINUTE IN YOUR ALARM
+#  CHANGING THE NUMBER OF INVOCATIONS PER MINUTE IN YOUR ALARM
 #  ---------------------------------------------------------------------------------------------------------
 
 ACCODE=000000000000		        # <<< Leave this line as it is
