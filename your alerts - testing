@@ -7,7 +7,7 @@
 
 1. Makes sure you have confirmation of task 1 & 2 before proceeding. It is helpful to have slack and sms open during testing. 
 
-2. Go to AWS lambdas. Create two test lambdas. On the function lage, press test. 
+2. Go to AWS lambdas. Create two test lambdas. On the function page, press test. 
 
 3. Press "TEST" button 5 times in ten seconds. Repeat this for the other lambda.
 
