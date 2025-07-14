@@ -10,6 +10,12 @@
 
 clear
 
+#  E X A M P L E S 
+
+#  SMSNO="+1(888) 222-8888"                    													<<< 	USA cell phone number of the person who will receive SMS alerts and most setup messages
+
+#  SLACK="https://hooks.slack.com/services/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"  			<<< 	Your slack webhook
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  Add your details here
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
