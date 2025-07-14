@@ -8,11 +8,11 @@
 
 #  E X A M P L E S 
 
-#  SMSNO="+1(888) 222-8888"                    													<<< 	USA cell phone number of the person who will receive SMS alerts and most setup messages
+#  SMSNO="+1(888) 222-8888"                    								<<< 	USA cell phone number of the person who will receive SMS alerts and most setup messages
 
 # "https://hooks.slack.com/services/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"  			<<< 	Your slack webhook
 
-#  UUID="8ed88a88-dc88-888e-be08-8fe88b85c8ccv"  												<<< 	The 36-character uuid or secret id which we supplied you with. Keep yours safe
+#  UUID="8ed88a88-dc88-888e-be08-8fe88b85c8ccv"  							<<< 	The 36-character uuid or secret id which we supplied you with. Keep yours safe
 
 UUID=""
 SMSNO=""
