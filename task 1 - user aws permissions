@@ -6,7 +6,7 @@
 # Setup the following 5 policies, or ask an admin to run the script.
 
 # Lambda-List   
-# CloudShell
+# CloudShell-User
 # CW-Alarm
 # CW-Logs-Query
 # IAM-Policy
@@ -33,7 +33,7 @@ Lambda-List
 }
 
 
-CloudShell
+CloudShell-User
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
