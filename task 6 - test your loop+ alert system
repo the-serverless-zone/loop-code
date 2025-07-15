@@ -5,7 +5,6 @@
 
 # How-to guide on alerts testing
 
-
 1. Makes sure you have confirmation of task 1 & 2 before proceeding. It is helpful to have slack and sms open during testing. 
 
 2. Go to AWS lambdas. Create two test lambdas. On the test page, press "TEST". 
