@@ -3,7 +3,7 @@
 #  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
 #  ---------------------------------------------------------------------------------------------------------
 
-# Setup the following 5 policies, or ask an admin to run the script.
+# Setup the following 6 policies, or ask an admin to run the script.
 
 # Lambda-List   
 # CloudShell-User
