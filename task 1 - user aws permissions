@@ -5,32 +5,18 @@
 
 # Setup the following 6 policies, or ask an admin to run the script.
 
-# Lambda-List   
+
 # CloudShell-User
 # CW-Alarm
 # CW-Logs-Query
 # IAM-Policy
+# Lambda-List   
 # S3-Put
 
 
 #  ---------------------------------------------------------------------------------------------------------
 #  POLICIES
 #  ---------------------------------------------------------------------------------------------------------
-
-
-Lambda-List
-------------------------------------------------------
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "lambda:ListFunctions",
-            "Resource": "*"
-        }
-    ]
-}
 
 
 CloudShell-User
@@ -116,6 +102,21 @@ IAM-Policy
 }
 
 
+Lambda-List
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "lambda:ListFunctions",
+            "Resource": "*"
+        }
+    ]
+}
+
+
 S3-Put
 ------------------------------------------------------
 {
@@ -129,9 +130,6 @@ S3-Put
         }
     ]
 }
-
-
-
 
 # Copyright (C) May 1st, 2023 Serverless-Zone
 # All Rights Reserved
