@@ -56,9 +56,9 @@ EMAIL=""
 
 
 
-# -------------------------------------------------------------------------------------------------------------------------
-# CloudShell script timer section - leave this section as it is. 
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  CloudShell script timer section - leave this section as it is. 
+#  -------------------------------------------------------------------------------------------------------------------------
 ACCID="209938012345"
 ACCNO="864917912345"
 tMinus()
@@ -81,9 +81,9 @@ clear
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Verification section:
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Verification section:
+#  -------------------------------------------------------------------------------------------------------------------------
 clear
 SLKISSUES=0
 account_error_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> There need to be at least 12 characters in the account number, please alter the number and re-run the script."	
@@ -128,9 +128,9 @@ fi
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Initial verification passed: further tests for expected string values
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Initial verification passed: further tests for expected string values
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:02"
 
 regex="^(([-a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~]+|(\"([][,:;<>\&@a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~-]|(\\\\[\\ \"]))+\"))\.)*([-a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~]+|(\"([][,:;<>\&@a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~-]|(\\\\[\\ \"]))+\"))@\w((-|\w)*\w)*\.(\w((-|\w)*\w)*\.)*\w{2,4}$"
@@ -206,23 +206,23 @@ fi
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Verification of your contact information was successful:
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Verification of your contact information was successful:
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:02"
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Setting up the installation:
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Setting up the installation:
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:02"
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Pre-clean install - let this process continue to pre-clean the system each time the script runs.
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Pre-clean install - let this process continue to pre-clean the system each time the script runs.
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:02"
 aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$ACCNO:policy/log-read-P
 aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$ACCNO:policy/lambda-list-P
@@ -237,16 +237,16 @@ aws cloudwatch delete-alarms --alarm-names alarm2sns
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Pre-configuration is complete:
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Pre-configuration is complete:
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:02"
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Secondary account setup is proceeding :
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Secondary account setup is proceeding :
+#  -------------------------------------------------------------------------------------------------------------------------
 
 aws cloudwatch put-metric-alarm --alarm-name "alarm2sns" --evaluation-periods 1 --threshold 3 --comparison-operator GreaterThanThreshold --alarm-actions arn:aws:lambda:us-east-1:$ACCID:function:fn_loop_client_$ACCNO --metrics '[{ "Id": "e1", "Expression": "MAX(q1)", "ReturnData": true },{"ReturnData": false, "Id": "q1","Expression": "SELECT SUM(Invocations) \nFROM SCHEMA(\"AWS/Lambda\", FunctionName) \nGROUP BY FunctionName \nORDER BY SUM() DESC", "Period":60}]'
 aws iam create-role --role-name crossP --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"Statement1","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::'$ACCID':root"},"Action":"sts:AssumeRole"}]}'
@@ -278,14 +278,14 @@ aws s3 cp "foo $ACCNO $EMAIL $SMSNO $SLACK $UUID.foo" s3://loop-detector-clients
 
 clear
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Initializing account objects - 2 minutes to complete.
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Initializing account objects - 2 minutes to complete.
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:02:00"
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Secondary Setup is starting - 4 minutes to complete.
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Secondary Setup is starting - 4 minutes to complete.
+#  -------------------------------------------------------------------------------------------------------------------------
 
 aws cloudwatch disable-alarm-actions --alarm-names "alarm2sns"
 tMinus "00:00:04"
@@ -301,24 +301,27 @@ tMinus "00:00:10"
 aws cloudwatch set-alarm-state --alarm-name "alarm2sns" --state-value ALARM --state-reason "testing-purposes" --region us-east-1
 tMinus "00:01:45"
 
-# -------------------------------------------------------------------------------------------------------------------------
-# A final alarm and permissions assessment is taking place: check your phone for SMS messages in less than one minute.
-# Please leave this screen open until the timer ends. 
-# -------------------------------------------------------------------------------------------------------------------------
+#  -------------------------------------------------------------------------------------------------------------------------
+#  A final alarm and permissions assessment is taking place: check your phone for SMS messages in less than one minute.
+#  Please leave this screen open until the timer ends. 
+#  -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:30"
 
-# -------------------------------------------------------------------------------------------------------------------------
-# Install has finished - please check for text messages regarding your install. 
-# If you do not get Part 1 and Part 2 SMS messages: read the security requirements doc here: 
+#  -------------------------------------------------------------------------------------------------------------------------
+#  Install has finished - please check for text messages regarding your install. 
+#  If you do not get Part 1 and Part 2 SMS messages: read the security requirements doc here: 
 #
-# https://github.com/the-serverless-zone/Loop-plus/blob/main/Policy-requirements.txt
-#
-# You may need to permissions and run the script again if you are missing either message. 
-# If you received Part 1 & Part 2 messages then you are all setup.  
-# The Loop+ team thanks you for using this product.
+#  https://github.com/the-serverless-zone/Loop-plus/blob/main/Policy-requirements.txt
+#  -------------------------------------------------------------------------------------------------------------------------
 
-# Copyright (C) May 1st, 2023 Serverless-Zone
-# All Rights Reserved
-# You may use, distribute and modify this code under the terms of the GNU license.
-# For terms please visit : https://www.gnu.org/licenses/gpl-3.0.en.html
+#  -------------------------------------------------------------------------------------------------------------------------
+#  You may need to permissions and run the script again if you are missing either message. 
+#  If you received Part 1 & Part 2 messages then you are all setup.  
+#  The Loop+ team thanks you for using this product.
+#  -------------------------------------------------------------------------------------------------------------------------
+
+#  Copyright (C) May 1st, 2023 Serverless-Zone
+#  All Rights Reserved
+#  You may use, distribute and modify this code under the terms of the GNU license.
+#  For terms please visit : https://www.gnu.org/licenses/gpl-3.0.en.html
 
