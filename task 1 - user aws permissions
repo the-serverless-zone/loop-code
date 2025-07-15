@@ -7,10 +7,10 @@
 
 # Lambda-List   
 # CloudShell
-# CW-Write-PutMetricAlarm
-# CWLogs-Read-GetQueryResults-StartQuery
-# IAM-Write-CreateRole-CreatePolicy-Attach-Detach-Delete
-# S3-PutObject
+# CW-Alarm
+# CW-Logs-Query
+# IAM-Policy
+# S3-Put
 
 #  ---------------------------------------------------------------------------------------------------------
 #  POLICIES
@@ -32,7 +32,7 @@ Lambda-List
 }
 
 
-CloudShell-Permissions
+CloudShell
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
@@ -56,7 +56,7 @@ CloudShell-Permissions
 }
 
 
-CW-Write-PutMetricAlarm
+CW-Alarm
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
@@ -74,7 +74,7 @@ CW-Write-PutMetricAlarm
 }
 
 
-CWLogs-Read-GetQueryResults-StartQuery
+CW-Logs-Query
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
@@ -93,7 +93,7 @@ CWLogs-Read-GetQueryResults-StartQuery
 }
 
 
-IAM-Write-CreateRole-CreatePolicy-Attach-Detach-Delete
+IAM-Policy
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
@@ -115,7 +115,7 @@ IAM-Write-CreateRole-CreatePolicy-Attach-Detach-Delete
 }
 
 
-S3-PutObject
+S3-Put
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
