@@ -3,7 +3,7 @@
 #  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
 #  ---------------------------------------------------------------------------------------------------------
 
-# Setup the following 6 policies: 
+# Setup the following 5 policies: 
 
 # Lambda-List   
 # CloudShell
