@@ -2,6 +2,7 @@
 #  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  ACCOUNT SETUP
 #  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #  Fill in the four fields on lines 19-22. During the training video you sent an email to us and received one back. Your UUID is in that email. 
 #  Slack is recommended. See the video chapter on Slack webhook creation. If you prefer, you can leave the Slack entry empty and as it is. Do not delete the entry. 
 #  After entering the four fields, copy these into CloudShell. The script will run immediately. Allow 5 minutes for this Cloudshell script to complete. 
