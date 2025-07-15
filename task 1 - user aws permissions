@@ -3,10 +3,10 @@
 #  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
 #  ---------------------------------------------------------------------------------------------------------
 
-# Setup the following 5 policies: 
+# Setup the following 6 policies: 
 
-# Lamba-List   
-# CloudShell*   
+# Lambda-List   
+# CloudShell
 # CW-Write-PutMetricAlarm
 # CWLogs-Read-GetQueryResults-StartQuery
 # IAM-Write-CreateRole-CreatePolicy-Attach-Detach-Delete
@@ -17,7 +17,7 @@
 #  ---------------------------------------------------------------------------------------------------------
 
 
-Lamba-List
+Lambda-List
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
@@ -84,7 +84,8 @@ CWLogs-Read-GetQueryResults-StartQuery
             "Effect": "Allow",
             "Action": [
                 "logs:GetQueryResults",
-                "logs:StartQuery"
+                "logs:StartQuery",
+                "logs:logs:DescribeLogStreams"
             ],
             "Resource": "*"
         }
@@ -127,6 +128,8 @@ S3-PutObject
         }
     ]
 }
+
+
 
 
 # Copyright (C) May 1st, 2023 Serverless-Zone
