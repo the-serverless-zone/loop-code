@@ -3,7 +3,18 @@
 #  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
 #  ---------------------------------------------------------------------------------------------------------
 
-# Setup the following 5 policies for CloudShell, S3, CloudWatch alarms and CloudWatch logs
+# Setup the following 5 policies: 
+
+# Lamba-List   
+# CloudShell*   
+# CW-Write-PutMetricAlarm
+# CWLogs-Read-GetQueryResults-StartQuery
+# IAM-Write-CreateRole-CreatePolicy-Attach-Detach-Delete
+# S3-PutObject
+
+#  ---------------------------------------------------------------------------------------------------------
+#  REQUIRED PERMISSIONS LIST
+#  ---------------------------------------------------------------------------------------------------------
 
 Lamba-List
 ------------------------------------------------------
