@@ -3,10 +3,18 @@
 #  CHANGING THE NUMBER OF INVOCATIONS PER MINUTE IN YOUR ALARM
 #  ---------------------------------------------------------------------------------------------------------
 
-ACCODE=000000000000		        # <<< Leave this line as it is
-ACCID=123412341234              # <<< Replace the all zero number with the registration number which sent in the sms message
-ACCNO=111222333444		          # <<<< Your company AWS Console's account number
-INVOKE=3			                  #  <<< Replace the number 3 with the number of invocations you expect to be high, and which ought to cause an alarm
+ACCODE=000000000000		       
+#Leave this line as it is
+
+ACCID=123412341234             
+# Replace the all zero number with the registration number which sent in the sms message
+
+ACCNO=111222333444		         
+# Your company AWS Console's account number
+
+INVOKE=3			                  
+# Replace the number 3 with the number of invocations you expect to be high, and which ought to cause an alarm
+
 
 .>"up-grade-score-$INVOKE|$ACCODE.new" 2>NUL
 
