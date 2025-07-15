@@ -52,6 +52,7 @@ CW-Alarm
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "cloudwatch:EnableAlarmActions",
                 "cloudwatch:PutMetricAlarm",
                 "cloudwatch:SetAlarmState"
             ],
