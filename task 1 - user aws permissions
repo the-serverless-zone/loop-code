@@ -85,7 +85,7 @@ CWLogs-Read-GetQueryResults-StartQuery
             "Action": [
                 "logs:GetQueryResults",
                 "logs:StartQuery",
-                "logs:logs:DescribeLogStreams"
+                "logs:DescribeLogStreams"
             ],
             "Resource": "*"
         }
