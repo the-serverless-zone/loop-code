@@ -3,7 +3,7 @@
 #  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
 #  ---------------------------------------------------------------------------------------------------------
 
-# Setup the following 6 policies, or ask an admin to run the script.
+# Setup the following 7 policies, or ask an admin to run the script.
 
 
 # CloudShell-User
@@ -129,6 +129,21 @@ S3-Put
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": "s3:PutObject",
+            "Resource": "*"
+        }
+    ]
+}
+
+
+SNS-Access
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "sns:*",
             "Resource": "*"
         }
     ]
