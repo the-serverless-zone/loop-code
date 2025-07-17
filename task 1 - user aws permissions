@@ -55,8 +55,9 @@ CW-Alarm
                 "cloudwatch:EnableAlarmActions",
                 "cloudwatch:PutMetricAlarm",
                 "cloudwatch:SetAlarmState",
-				"cloudwatch:DescribeAlarms",
-				"cloudwatch:DescribeAlarmHistory"
+		"cloudwatch:DescribeAlarms",
+		"cloudwatch:DescribeAlarmHistory",
+		"cloudwatch:DisableAlarmActions"
             ],
             "Resource": "*"
         }
