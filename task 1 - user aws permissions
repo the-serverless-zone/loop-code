@@ -74,9 +74,13 @@ CW-Logs-Query
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "logs:GetQueryResults",
-                "logs:StartQuery",
-                "logs:DescribeLogStreams"
+		"logs:GetQueryResults",
+		"logs:StartQuery",
+		"logs:DescribeLogStreams",
+		"logs:ListLogGroups",
+		"logs:ListLogGroupsForQuery",
+		"logs:ListLogGroupsForEntity",
+		"logs:DescribeLogGroups"
             ],
             "Resource": "*"
         }
