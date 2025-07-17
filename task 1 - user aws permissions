@@ -9,7 +9,7 @@
 # CloudShell-User
 # CW-Alarm
 # CW-Logs
-# Lambda-List   
+# Lambda-Access
 # IAM-Access
 # S3-Access
 # SNS-Access
@@ -89,7 +89,7 @@ CW-Logs
 }
 
 
-Lambda-List
+Lambda-Access
 ------------------------------------------------------
 {
     "Version": "2012-10-17",
@@ -97,7 +97,10 @@ Lambda-List
         {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
-            "Action": "lambda:ListFunctions",
+            "Action": [
+                "lambda:ListFunctions",
+                "lambda:InvokeFunction"
+            ],
             "Resource": "*"
         }
     ]
