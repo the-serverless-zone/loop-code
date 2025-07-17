@@ -8,10 +8,11 @@
 
 # CloudShell-User
 # CW-Alarm
-# CW-Logs-Query
-# IAM-Attach-Policy
+# CW-Logs
 # Lambda-List   
-# S3-Put
+# IAM-Access
+# S3-Access
+# SNS-Access
 
 
 #  ---------------------------------------------------------------------------------------------------------
@@ -88,6 +89,21 @@ CW-Logs
 }
 
 
+Lambda-List
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "lambda:ListFunctions",
+            "Resource": "*"
+        }
+    ]
+}
+
+
 IAM-Access
 ------------------------------------------------------
 {
@@ -104,21 +120,6 @@ IAM-Access
                 "iam:DeleteRole",
                 "iam:AttachRolePolicy"
             ],
-            "Resource": "*"
-        }
-    ]
-}
-
-
-Lambda-List
-------------------------------------------------------
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "lambda:ListFunctions",
             "Resource": "*"
         }
     ]
