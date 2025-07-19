@@ -1,1 +1,14 @@
+#  T A S K   S I X . . . Test your loop+ system
+#  ---------------------------------------------------------------------------------------------------------
+#  TESTING YOUR ACCOUNT ALERTS
+#  ---------------------------------------------------------------------------------------------------------
 
+# How-to guide on alerts testing
+
+1. Makes sure you have confirmation of task 1 & 2 before proceeding. It is helpful to have slack and sms open during testing. 
+
+2. Go to AWS lambdas. Create two test lambdas. On the test page, press "TEST". 
+
+3. Press "TEST" button 5 or more times in as many seconds. Repeat this for the other lambda.
+
+4. In two to four minutes, your alerts should appear.
