@@ -1,1 +1,167 @@
+#  T A S K   O N E   . . .  Review required permissions
+#  ---------------------------------------------------------------------------------------------------------
+#  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
+#  ---------------------------------------------------------------------------------------------------------
 
+# Setup the following 7 policies, or ask an admin to run the script.
+
+
+# CloudShell-User
+# CW-Alarm
+# CW-Logs
+# IAM-Access
+# Lambda-Access
+# S3-Access
+# SNS-Access
+
+
+#  ---------------------------------------------------------------------------------------------------------
+#  POLICIES
+#  ---------------------------------------------------------------------------------------------------------
+
+
+CloudShell-User
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudshell:DeleteEnvironment",
+                "cloudshell:DescribeEnvironments",
+                "cloudshell:PutCredentials",
+                "cloudshell:StopEnvironment",
+                "cloudshell:CreateEnvironment",
+                "cloudshell:GetEnvironmentStatus",
+                "cloudshell:StartEnvironment",
+                "cloudshell:CreateSession"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+CW-Alarm
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:EnableAlarmActions",
+                "cloudwatch:PutMetricAlarm",
+                "cloudwatch:SetAlarmState",
+		"cloudwatch:DescribeAlarms",
+		"cloudwatch:DescribeAlarmHistory",
+		"cloudwatch:DisableAlarmActions",
+		"cloudwatch:GetMetricData"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+CW-Logs
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+		"logs:GetQueryResults",
+		"logs:StartQuery",
+		"logs:DescribeLogStreams",
+		"logs:ListLogGroups",
+		"logs:ListLogGroupsForQuery",
+		"logs:ListLogGroupsForEntity",
+		"logs:DescribeLogGroups"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+IAM-Access
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreatePolicy",
+                "iam:DetachRolePolicy",
+                "iam:DeletePolicy",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+Lambda-Access
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:ListFunctions",
+                "lambda:InvokeFunction",
+                "lambda:GetFunction"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+S3-Access
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:PutObject",
+            "Resource": "*"
+        }
+    ]
+}
+
+
+SNS-Access
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "sns:*",
+            "Resource": "*"
+        }
+    ]
+}
+
+
+# Copyright (C) May 1st, 2023 Serverless-Zone
+# All Rights Reserved
+# You may use, distribute and modify this code under the terms of the GNU license.
+# For terms please visit : https://www.gnu.org/licenses/gpl-3.0.en.html
