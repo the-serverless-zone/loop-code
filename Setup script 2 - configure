@@ -1,4 +1,8 @@
-#  C o n f i g u r e    A c c o u n t    G u i d e    . . . 
+
+#  Configure your account
+#  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#  ACCOUNT CONFIGURE STEPS: 
+#  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 #  Fill in the four fields on lines 19-22. During the training video you sent an email to us and received one back. Your SECRETID is in that email. 
 #  Slack is recommended. See the video chapter on Slack webhook creation. If you prefer, you can leave the Slack entry empty and as it is. Do not delete the entry. 
