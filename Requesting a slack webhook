@@ -1,1 +1,36 @@
 
+#  T A S K   T W O   . . .  Create a webhook 
+#  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#  WEBHOOK SETUP STEPS: 
+#  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+01. Open slack in your WEB BROWSER and LOGIN
+
+02. Open a new web browser tab 
+
+03. Type   api.slack.com
+
+04. Click [YOUR APPS] (top right)
+
+05. Create a New App [FROM SCRATCH]
+
+06. Name the app
+
+07. Select a workspace 
+
+08. Press [Create app]
+
+09. Click incoming webhooks (left hand panel)
+
+10. Move the slider button to [ON] if it is off
+
+11. [ADD NEW WEBHHOOK] bottom of the screen - Select a channel where you want your messages to appear
+
+12. Press allow 
+
+13. Scroll to the bottom of the screen
+
+14. [Copy] the webhook, open notepad++ and paste in the result
+
+15. Keep a copy of the webhook
+
