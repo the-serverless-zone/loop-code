@@ -4,23 +4,23 @@
 #  CHANGING THE NUMBER OF INVOCATIONS PER MINUTE IN YOUR ALARM
 #  ---------------------------------------------------------------------------------------------------------
 
-ACCODE=000000000000		       
+access_code=000000000000		       
 #Leave this line as it is
 
-ACCID=123412341234             
-# Replace the all zero number with the registration number which sent in the sms message
+registration_number=123412341234             
+# Replace the all zero number with the registration number which was sent in the second sms setup message
 
-ACCNO=111222333444		         
+your_aws_account=111222333444		         
 # Your company AWS Console's account number
 
-INVOKE=3			                  
+invoke=3			                  
 # Replace the number 3 with the number of invocations you expect to be high, and which ought to cause an alarm
 
 
-.>"up-grade-score-$INVOKE|$ACCODE.new" 2>NUL
+.>"up-grade-score-$invoke|$access_code.new" 2>NUL
 
-aws s3 cp "up-grade-score-$INVOKE|$ACCODE.new" s3://loop-invoke-children-$ACCID            
-aws cloudwatch put-metric-alarm --alarm-name "alarm2sns" --evaluation-periods 1 --threshold $INVOKE --comparison-operator GreaterThanThreshold --alarm-actions arn:aws:lambda:us-east-1:$ACCID:function:fn_loop_client_$ACCNO --metrics '[{ "Id": "e1", "Expression": "MAX(q1)", "ReturnData": true },{"ReturnData": false, "Id": "q1","Expression": "SELECT SUM(Invocations) \nFROM SCHEMA(\"AWS/Lambda\", FunctionName) \nGROUP BY FunctionName \nORDER BY SUM() DESC", "Period":60}]'
+aws s3 cp "up-grade-score-$invoke|$access_code.new" s3://loop-invoke-children-$registration_number            
+aws cloudwatch put-metric-alarm --alarm-name "alarm2sns" --evaluation-periods 1 --threshold $invoke --comparison-operator GreaterThanThreshold --alarm-actions arn:aws:lambda:us-east-1:$registration_number:function:fn_loop_client_$your_aws_account --metrics '[{ "Id": "e1", "Expression": "MAX(q1)", "ReturnData": true },{"ReturnData": false, "Id": "q1","Expression": "SELECT SUM(Invocations) \nFROM SCHEMA(\"AWS/Lambda\", FunctionName) \nGROUP BY FunctionName \nORDER BY SUM() DESC", "Period":60}]'
 
 #  --------------------------------------------------------------------------------------------------------------
 #  C O P Y   E V E R Y T H I N G   O N   T H I S   P A G E   I N T O   C L O U D S H E L L
