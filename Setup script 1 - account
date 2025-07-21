@@ -8,7 +8,7 @@
 #  ACCOUNT SETUP STEPS: 
 #  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#  Add your SMS text number, your email_address and the AWS Account number, optional slack webhook into the first four rows of the script, below.
+#  Lines 30 to 36: Add your SMS text number, your email_address and the AWS Account number, optional slack webhook into the first four rows of the script, below.
 #  Ensure that you have the correct permissions.
 #  Select all, and copy this entire script and paste it into CloudShell, and it will run imediately. 
 #  Allow 2 minutes for the CloudShell script to complete.
