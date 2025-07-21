@@ -21,11 +21,15 @@
 
 #  Example    registration_number="123456782222"	(The account registration which we sent you)								
 
-#  Example    secret_id="8ed88a88-dc88-888e-be08-8fe88b85c8ccv" (The secret_id we sent you)	
-						
+#  Example    secret_id="8ed88a88-dc88-888e-be08-8fe88b85c8ccv" (The secret_id we sent you)							
 
 #  No spaces after the quotes, none in the quotes, no spaces around the operator, none on the line itself. 
 
+clear
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#  Add your details here
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 your_aws_account=""
 
