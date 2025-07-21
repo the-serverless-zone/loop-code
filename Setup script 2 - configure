@@ -4,8 +4,8 @@
 #  ACCOUNT CONFIGURE STEPS: 
 #  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
-#  Fill in the four fields on lines 19-22. During the training video you sent an email to us and received one back. Your SECRETID is in that email. 
-#  Slack is recommended. See the video chapter on Slack webhook creation. If you prefer, you can leave the Slack entry empty and as it is. Do not delete the entry. 
+#  Fill in the four fields on lines 19-22. During the training video you sent an email_address to us and received one back. Your secret_id is in that email_address. 
+#  slack_webhook is recommended. See the video chapter on slack_webhook webhook creation. If you prefer, you can leave the slack_webhook entry empty and as it is. Do not delete the entry. 
 #  After entering the four fields, copy these into CloudShell. The script will run immediately. Allow 5 minutes for this Cloudshell script to complete. 
 #  Messages will be sent to you to confirm progress.
 
@@ -21,13 +21,11 @@
 
 #  Example    registration_number="123456782222"	(The account registration which we sent you)								
 
-#  Example    secret_id="8ed88a88-dc88-888e-be08-8fe88b85c8ccv"
+#  Example    secret_id="8ed88a88-dc88-888e-be08-8fe88b85c8ccv" (The secret_id we sent you)	
 						
 
 #  No spaces after the quotes, none in the quotes, no spaces around the operator, none on the line itself. 
 
-
-# FILL IN THESE FIELDS
 
 your_aws_account=""
 
@@ -107,20 +105,20 @@ clear
 SLKISSUES=0
 account_error_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> There need to be at least 12 characters in the account number, please alter the number and re-run the script."	
 sms_num_error_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> There need to be at least 10 characters in the sms number, please alter the number and re-run the script."
-slack_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> There need to be at least 117 characters in the slack webhook, please alter the number and re-run the script."
-email_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> The email needs to be altered, please check the syntax of your email and re-run the script."
-slack_hkinf=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> example: https://hooks.slack.com/services/X93RUCBUZNV/B07H80DMUQ0/E4hpCFARxtAt65stR7b0wTyBd275d2ae-2470-4eee-a195-aac04883fdd4"
+slack_webhook_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> There need to be at least 117 characters in the slack_webhook webhook, please alter the number and re-run the script."
+email_address_check=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> The email_address needs to be altered, please check the syntax of your email_address and re-run the script."
+slack_webhook_hkinf=">>>>>>>>>>>>>>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> >>>>>>>>>>>>>> example: https://hooks.slack_webhook.com/services/X93RUCBUZNV/B07H80DMUQ0/E4hpCFARxtAt65stR7b0wTyBd275d2ae-2470-4eee-a195-aac04883fdd4"
 
-if [[ $EMAIL == "" ]] ; then
+if [[ $email_address == "" ]] ; then
   clear
-  echo "Email cannot be left blank, add in the email and re-run."
+  echo "email_address cannot be left blank, add in the email_address and re-run."
   tMinus "00:00:10"
   exit
 fi
 
 clear
 
-if [[ $YOURACCNO == "" ]] ; then
+if [[ $your_aws_account == "" ]] ; then
   clear
   echo "The AWS account number cannot be left blank, add in the 12-digit number and re-run."
   tMinus "00:00:10"
@@ -129,7 +127,7 @@ fi
 
 clear
 
-if [[ $SMSNO == "" ]] ; then
+if [[ $sms_number="" == "" ]] ; then
   clear
   echo "The SMS number cannot be left blank, add in the +1 USA number and re-run. 50 Federal USA states and protectorates only."
   tMinus "00:00:15"
@@ -138,9 +136,9 @@ fi
 
 clear
 
-if [[ $SLACK == "" ]] ; then
+if [[ $slack_webhook == "" ]] ; then
   clear
-  echo "Slack is empty, however slack is optional and can be left blank, add this in later if you wish. Continuing with the install ..."
+  echo "slack_webhook is empty, however slack_webhook is optional and can be left blank, add this in later if you wish. Continuing with the install ..."
   tMinus "00:00:10"
   exit
 fi
@@ -154,25 +152,25 @@ tMinus "00:00:02"
 
 regex="^(([-a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~]+|(\"([][,:;<>\&@a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~-]|(\\\\[\\ \"]))+\"))\.)*([-a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~]+|(\"([][,:;<>\&@a-zA-Z0-9\!#\$%\&\'*+/=?^_\`{\|}~-]|(\\\\[\\ \"]))+\"))@\w((-|\w)*\w)*\.(\w((-|\w)*\w)*\.)*\w{2,4}$"
 
-if [[ $EMAIL =~ $regex ]] ; then
-  echo "email ok"
+if [[ $email_address =~ $regex ]] ; then
+  echo "email_address ok"
 else
 
   clear
   
   echo
   
-  $email_check
+  $email_address_check
   tMinus "00:00:10"
   exit
 fi
 
 clear
 
-YOURACCNO=$(sed 's/[.-]//g' <<< "$YOURACCNO")
-YOURACCNO=$(sed 's/[. ]//g' <<< "$YOURACCNO")
-echo $YOURACCNO
-str=$YOURACCNO
+your_aws_account=$(sed 's/[.-]//g' <<< "$your_aws_account")
+your_aws_account=$(sed 's/[. ]//g' <<< "$your_aws_account")
+echo $your_aws_account
+str=$your_aws_account
 n=${#str}
 echo "Length of the Account number string is : $n "
 
@@ -185,14 +183,14 @@ fi
 
 clear
 
-SMSNO=$(sed 's/[.-]//g' <<< "$SMSNO")
-SMSNO=$(sed 's/[. ]//g' <<< "$SMSNO")
-SMSNO=$(sed 's/[.+]//g' <<< "$SMSNO")
-SMSNO=$(sed 's/[.(]//g' <<< "$SMSNO")
-SMSNO=$(sed 's/[.)]//g' <<< "$SMSNO")
+sms_number=""=$(sed 's/[.-]//g' <<< "$sms_number=""")
+sms_number=""=$(sed 's/[. ]//g' <<< "$sms_number=""")
+sms_number=""=$(sed 's/[.+]//g' <<< "$sms_number=""")
+sms_number=""=$(sed 's/[.(]//g' <<< "$sms_number=""")
+sms_number=""=$(sed 's/[.)]//g' <<< "$sms_number=""")
 
-echo $SMSNO
-str=$SMSNO
+echo $sms_number=""
+str=$sms_number=""
 n=${#str}
 
 clear
@@ -205,22 +203,22 @@ if [ "$n" -lt 9 ]; then
     	tMinus "00:00:10"
     exit
 fi
-# Email regex check ok."
+# email_address regex check ok."
 # Account number length ok."
 # SMS number minimum length ok."
 	tMinus "00:00:02"
 	
 clear
 
-SLACK=$(sed 's/[ ]//g' <<< "$SLACK")
-echo $SLACK
-strS=$SLACK
+slack_webhook=$(sed 's/[ ]//g' <<< "$slack_webhook")
+echo $slack_webhook
+strS=$slack_webhook
 n=${#strS}
 
 clear
 
 if [ "$n" -lt 81 ]; then
-  $SLACK = "xxx-SLACK-xxx"
+  $slack_webhook = "xxx-slack_webhook-xxx"
 fi
 
 clear
@@ -243,15 +241,15 @@ clear
 # Pre-clean install - let this process continue to pre-clean the system each time the script runs.
 # -------------------------------------------------------------------------------------------------------------------------
 tMinus "00:00:02"
-aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$YOURACCNO:policy/log-read-P
-aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$YOURACCNO:policy/lambda-list-P
-aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$YOURACCNO:policy/log-describe-P
+aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$your_aws_account:policy/log-read-P
+aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$your_aws_account:policy/lambda-list-P
+aws iam detach-role-policy --role-name crossP --policy-arn arn:aws:iam::$your_aws_account:policy/log-describe-P
 
 tMinus "00:00:02"
 aws iam delete-role --role-name crossP
-aws iam delete-policy --policy-arn arn:aws:iam::$YOURACCNO:policy/lambda-list-P
-aws iam delete-policy --policy-arn arn:aws:iam::$YOURACCNO:policy/log-read-P
-aws iam delete-policy --policy-arn arn:aws:iam::$YOURACCNO:policy/log-describe-P
+aws iam delete-policy --policy-arn arn:aws:iam::$your_aws_account:policy/lambda-list-P
+aws iam delete-policy --policy-arn arn:aws:iam::$your_aws_account:policy/log-read-P
+aws iam delete-policy --policy-arn arn:aws:iam::$your_aws_account:policy/log-describe-P
 aws cloudwatch delete-alarms --alarm-names alarm2sns
 
 clear
@@ -267,33 +265,33 @@ clear
 # Secondary account setup is proceeding :
 # -------------------------------------------------------------------------------------------------------------------------
 
-aws cloudwatch put-metric-alarm --alarm-name "alarm2sns" --evaluation-periods 1 --threshold 3 --comparison-operator GreaterThanThreshold --alarm-actions arn:aws:lambda:us-east-1:$REGNUMBER:function:fn_loop_client_$YOURACCNO --metrics '[{ "Id": "e1", "Expression": "MAX(q1)", "ReturnData": true },{"ReturnData": false, "Id": "q1","Expression": "SELECT SUM(Invocations) \nFROM SCHEMA(\"AWS/Lambda\", FunctionName) \nGROUP BY FunctionName \nORDER BY SUM() DESC", "Period":60}]'
-aws iam create-role --role-name crossP --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"Statement1","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::'$REGNUMBER':root"},"Action":"sts:AssumeRole"}]}'
+aws cloudwatch put-metric-alarm --alarm-name "alarm2sns" --evaluation-periods 1 --threshold 3 --comparison-operator GreaterThanThreshold --alarm-actions arn:aws:lambda:us-east-1:$registration_number:function:fn_loop_client_$your_aws_account --metrics '[{ "Id": "e1", "Expression": "MAX(q1)", "ReturnData": true },{"ReturnData": false, "Id": "q1","Expression": "SELECT SUM(Invocations) \nFROM SCHEMA(\"AWS/Lambda\", FunctionName) \nGROUP BY FunctionName \nORDER BY SUM() DESC", "Period":60}]'
+aws iam create-role --role-name crossP --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"Statement1","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::'$registration_number':root"},"Action":"sts:AssumeRole"}]}'
 clear
 
 aws iam create-policy --policy-name log-read-P --policy-document '{"Version": "2012-10-17","Statement": [{"Sid": "VisualEditor0","Effect":"Allow","Action":["logs:GetQueryResults","logs:StartQuery","logs:DescribeLogGroups"],"Resource":"*"}]}'
 aws iam create-policy --policy-name lambda-list-P --policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"VisualEditor0","Effect":"Allow","Action":"lambda:ListFunctions","Resource":"*"}]}'
 aws iam create-policy --policy-name log-describe-P --policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"VisualEditor0","Effect":"Allow","Action":"logs:DescribeLogStreams","Resource":"*"}]}'
 
-aws iam attach-role-policy --policy-arn arn:aws:iam::$YOURACCNO:policy/log-read-P --role-name crossP
-aws iam attach-role-policy --policy-arn arn:aws:iam::$YOURACCNO:policy/lambda-list-P --role-name crossP
-aws iam attach-role-policy --policy-arn arn:aws:iam::$YOURACCNO:policy/log-describe-P --role-name crossP
+aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/log-read-P --role-name crossP
+aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/lambda-list-P --role-name crossP
+aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/log-describe-P --role-name crossP
 
 tMinus "00:00:02"
 clear
 
-SLACK=${SLACK// /}
-YOURACCNO=${YOURACCNO// /}
-EMAIL=${EMAIL// /}
-SMSNO=${SMSNO// /}
-SLACK=${SLACK////|}
+slack_webhook=${slack_webhook// /}
+your_aws_account=${your_aws_account// /}
+email_address=${email_address// /}
+sms_number=""=${sms_number=""// /}
+slack_webhook=${slack_webhook////|}
 
-.>"bar $YOURACCNO $EMAIL $SMSNO $SLACK $SECRETID.bar" 2>NUL
-aws s3 cp "bar $YOURACCNO $EMAIL $SMSNO $SLACK $SECRETID.bar" s3://loop-invoke-children-$REGNUMBER
+.>"bar $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.bar" 2>NUL
+aws s3 cp "bar $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.bar" s3://loop-invoke-children-$registration_number
 tMinus "00:00:10"
 
-.>"foo $YOURACCNO $EMAIL $SMSNO $SLACK $SECRETID.foo" 2>NUL
-aws s3 cp "foo $YOURACCNO $EMAIL $SMSNO $SLACK $SECRETID.foo" s3://loop-detector-clients-$REGNUMBER
+.>"foo $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.foo" 2>NUL
+aws s3 cp "foo $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.foo" s3://loop-detector-clients-$registration_number
 
 clear
 
