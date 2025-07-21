@@ -11,7 +11,15 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Examples of the 4 fields below with their formats. We will verify these before the install. 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-       
+#your_aws_account="123412341234"
+#Your 12 digit AWS ACCOUNT NUMBER
+
+#sms_number="+1(555) 219-1111"          		
+#Your USA +1 10-digit cell phone number
+
+#email_address="dave.mcguire@corp.com"          	
+#The email_address address of the team leader   
+
 clear
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -20,11 +28,11 @@ clear
 
 your_aws_account=""
 
-sms_number="011698514599"
+sms_number=""
 
-email_address="john.e.danson@protonmail.com"
+email_address=""
 
-slack_webhook="https://hooks.slack.com/services/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"
+slack_webhook=""
 
 clear
 
