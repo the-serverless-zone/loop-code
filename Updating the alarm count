@@ -8,14 +8,14 @@
 #  CHANGING THE NUMBER OF INVOCATIONS PER MINUTE IN YOUR ALARM
 #  ---------------------------------------------------------------------------------------------------------
 
+your_aws_account=""
+# Your company AWS Console's account number
+
 access_code="000000000000"
 # Leave this line as it is
 
 registration_number=""
 # Replace the all zero number with the registration number which was sent in the second sms setup message
-
-your_aws_account=""
-# Your company AWS Console's account number
 
 invoke="3"
 # Replace the number 3 with the number of invocations you expect to be high, and which ought to cause an alarm
