@@ -12,7 +12,7 @@
 # Examples of the 4 fields below with their formats. We will verify these before the install. 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#your_aws_account="077917095421"                    	
+#your_aws_account="022917095421"                    	
 # Your 12 digit AWS ACCOUNT NUMBER
 
 #sms_number="+1(555) 219-8888"                		
