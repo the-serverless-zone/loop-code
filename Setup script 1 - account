@@ -12,13 +12,13 @@
 # Examples of the 4 fields below with their formats. We will verify these before the install. 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#your_aws_account="022917095421"                    	
+#your_aws_account="123412341234"                    	
 # Your 12 digit AWS ACCOUNT NUMBER
 
-#sms_number="+1(555) 219-8888"                		
+#sms_number="+1(555) 219-1111"                		
 # Your USA +1 10-digit cell phone number 
 
-#email_address="dave.mcguire@gmail.com"          	
+#email_address="dave.mcguire@corp.com"          	
 # The email_address address of the team leader
 
 #slack_webhook="https://hooks.slack.com/services/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"                   
