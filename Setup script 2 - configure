@@ -129,7 +129,7 @@ fi
 
 clear
 
-if [[ $sms_number="" == "" ]] ; then
+if [[ $sms_number == "" ]] ; then
   clear
   echo "The SMS number cannot be left blank, add in the +1 USA number and re-run. 50 Federal USA states and protectorates only."
   tMinus "00:00:15"
@@ -185,15 +185,16 @@ fi
 
 clear
 
-sms_number=""=$(sed 's/[.-]//g' <<< "$sms_number=""")
-sms_number=""=$(sed 's/[. ]//g' <<< "$sms_number=""")
-sms_number=""=$(sed 's/[.+]//g' <<< "$sms_number=""")
-sms_number=""=$(sed 's/[.(]//g' <<< "$sms_number=""")
-sms_number=""=$(sed 's/[.)]//g' <<< "$sms_number=""")
+sms_number=$(sed 's/[.-]//g' <<< "$sms_number")
+sms_number=$(sed 's/[. ]//g' <<< "$sms_number")
+sms_number=$(sed 's/[.+]//g' <<< "$sms_number")
+sms_number=$(sed 's/[.(]//g' <<< "$sms_number")
+sms_number=$(sed 's/[.)]//g' <<< "$sms_number")
 
-echo $sms_number=""
-str=$sms_number=""
+echo $sms_number
+str=$sms_number
 n=${#str}
+
 
 clear
 
@@ -285,15 +286,15 @@ clear
 slack_webhook=${slack_webhook// /}
 your_aws_account=${your_aws_account// /}
 email_address=${email_address// /}
-sms_number=""=${sms_number=""// /}
+sms_number=${sms_number=""// /}
 slack_webhook=${slack_webhook////|}
 
-.>"bar $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.bar" 2>NUL
-aws s3 cp "bar $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.bar" s3://loop-invoke-children-$registration_number
+.>"bar $your_aws_account $email_address $sms_number $slack_webhook $secret_id.bar" 2>NUL
+aws s3 cp "bar $your_aws_account $email_address $sms_number $slack_webhook $secret_id.bar" s3://loop-invoke-children-$registration_number
 tMinus "00:00:10"
 
-.>"foo $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.foo" 2>NUL
-aws s3 cp "foo $your_aws_account $email_address $sms_number="" $slack_webhook $secret_id.foo" s3://loop-detector-clients-$registration_number
+.>"foo $your_aws_account $email_address $sms_number $slack_webhook $secret_id.foo" 2>NUL
+aws s3 cp "foo $your_aws_account $email_address $sms_number $slack_webhook $secret_id.foo" s3://loop-detector-clients-$registration_number
 
 clear
 
