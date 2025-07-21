@@ -13,11 +13,11 @@
 
 #  Example    your_aws_account="123456781111"	(Your own account number)	
 
-#  Example    sms_number=""="+1(888)222-8888"                 													
+#  Example    sms_number=""="+1(888)222-8888"                													
+
+#  Example    email_address="dave.x@corp.com" 		
 
 #  Example    slack_webhook="https://hooks.slack_webhook.com/services/T09F2DBBCGE/B09F640A79W/aYSRkoQL1H9LrNz1w6giqiAf"		
-
-#  Example    email_address="dave.x@corp.com" 					
 
 clear
 
