@@ -6,8 +6,8 @@
  
 #  Fill in the four fields on lines 19-22. During the training video you sent an email_address to us and received one back. Your secret_id is in that email_address. 
 #  slack_webhook is recommended. See the video chapter on slack_webhook webhook creation. If you prefer, you can leave the slack_webhook entry empty and as it is. Do not delete the entry. 
-#  After entering the four fields, copy these into CloudShell. The script will run immediately. Allow 5 minutes for this Cloudshell script to complete. 
-#  Messages will be sent to you to confirm progress.
+#  After entering the four fields, copy these into CloudShell. The script will run immediately. 
+#  Allow 5 minutes for this Cloudshell script to complete.
 
 #  E X A M P L E S 
 
