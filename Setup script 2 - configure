@@ -10,7 +10,7 @@
  
 #  During the training video you sent an email to us and received one back. Your secret_id and registration_number is in that email. 
 #  Fill in the six fields on lines 34 to 44. 
-#  After entering the four fields, copy these and paste them directly into CloudShell. The script will run immediately. 
+#  After entering the fields, copy these and paste the whole script directly into CloudShell. The script will run immediately. 
 #  Allow five minutes for the CloudShell script to complete.
 
 #  E X A M P L E S 
