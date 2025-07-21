@@ -13,7 +13,7 @@
 
 #  Example    your_aws_account="123456781111"	(Your own account number)	
 
-#  Example    sms_number=""="+1(888)222-8888"                													
+#  Example    sms_number="+1(888)222-8888"                													
 
 #  Example    email_address="dave.x@corp.com" 		
 
