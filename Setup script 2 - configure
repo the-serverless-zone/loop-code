@@ -26,17 +26,17 @@
 #  No spaces after the quotes, none in the quotes, no spaces around the operator, none on the line itself. 
 
 
-YOURACCNO=""
+your_aws_account=""
 
-SMSNO=""
+sms_number=""
 
-SLACK=""
+slack_webhook=""
 
-EMAIL=""
+email_address=""
 
-REGNUMBER=""
+registration_number=""
 
-SECRETID=""
+secret_id=""
 
 
 
