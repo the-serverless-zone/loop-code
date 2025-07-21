@@ -18,7 +18,10 @@
 #Your USA +1 10-digit cell phone number
 
 #email_address="dave.mcguire@corp.com"          	
-#The email_address address of the team leader   
+#The email_address address of the team leader  
+
+#slack_webhook="https://hooks.slack.com/services/T0AW2DZQDGE/Z99F640A79W/aYSCkoQL1H9LrQq1w6giqiZs"  	
+#Your slack webhook 
 
 clear
 
