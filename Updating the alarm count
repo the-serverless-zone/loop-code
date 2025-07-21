@@ -9,7 +9,7 @@
 #  ---------------------------------------------------------------------------------------------------------
 
 access_code=000000000000		       
-#Leave this line as it is
+# Leave this line as it is
 
 registration_number=123412341234             
 # Replace the all zero number with the registration number which was sent in the second sms setup message
