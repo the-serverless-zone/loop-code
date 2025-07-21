@@ -26,17 +26,18 @@
 #  No spaces after the quotes, none in the quotes, no spaces around the operator, none on the line itself. 
 
 
+YOURACCNO=""
+
 SMSNO=""
 
 SLACK=""
-
-SECRETID=""
 
 EMAIL=""
 
 REGNUMBER=""
 
-YOURACCNO=""
+SECRETID=""
+
 
 
 
