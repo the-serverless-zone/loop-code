@@ -9,14 +9,15 @@
 #  After entering the four fields, copy these into CloudShell. The script will run immediately. Allow 5 minutes for this Cloudshell script to complete. 
 #  Messages will be sent to you to confirm progress.
 
-
 #  E X A M P L E S 
 
 #  Example    SMSNO="+1(888)222-8888"                    													
 
 #  Example    SLACK="https://hooks.slack.com/services/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"  			
 
-#  Example    SECRETID="8ed88a88-dc88-888e-be08-8fe88b85c8ccv"  												
+#  Example    SECRETID="8ed88a88-dc88-888e-be08-8fe88b85c8ccv"  	
+
+#  Example    EMAIL="dave.x@corp.com"  	
 
 #  Example    REGNUMBER="123456782222"	(The account registration which we sent you)									
 
@@ -25,14 +26,11 @@
 #  No spaces after the quotes, none in the quotes, no spaces around the operator, none on the line itself. 
 
 
-
-
-
-SECRETID=""
-
 SMSNO=""
 
 SLACK=""
+
+SECRETID=""
 
 EMAIL=""
 
