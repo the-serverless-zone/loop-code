@@ -8,8 +8,8 @@
 
 1. Makes sure you have confirmation of task 1 & 2 before proceeding. It is helpful to have slack and sms open during testing. 
 
-2. Go to AWS lambdas. Create two test lambdas. On the test page, press "TEST". 
+2. In your company AWS account Go to AWS lambda. Create two test lambdas. On the test page, press "TEST". 
 
-3. Press "TEST" button 5 or more times in as many seconds. Repeat this for the other lambda(s).
+3. Press the "TEST" button 5 or more times in as many seconds. If you wish, set this test up for multiple lambdas.
 
-4. In two to four minutes, your alerts should appear.
+4. In two to four minutes, your alerts should appear on your phone, slack and email. 
