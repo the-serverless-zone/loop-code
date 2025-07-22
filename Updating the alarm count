@@ -20,7 +20,7 @@ secret_id=""
 # Replace the all zero number with the registration number which was sent in the second sms setup message
 
 invoke="3"
-# Replace the number 3 with the number of invocations you expect to be high, and which ought to cause an alarm
+# Replace the number above with the number of invocations you expect to be that which will trigger an alert.
 
 .>"up-grade-score-$invoke|$secret_id.new" 2>NUL
 
