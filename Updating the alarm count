@@ -12,8 +12,10 @@ your_aws_account=""
 # Your company AWS Console's account number
 
 registration_number=""
+# The registration_number sent in the text
 
 secret_id=""
+# The secret_id sent in the text
 
 # Replace the all zero number with the registration number which was sent in the second sms setup message
 
