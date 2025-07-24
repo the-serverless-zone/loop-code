@@ -282,6 +282,7 @@ aws iam create-policy --policy-name alarm-reset-P --policy-document '{"Version":
 aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/log-read-P --role-name crossP
 aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/lambda-list-P --role-name crossP
 aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/log-describe-P --role-name crossP
+aws iam attach-role-policy --policy-arn arn:aws:iam::$your_aws_account:policy/alarm-reset-P --role-name crossP
 
 tMinus "00:00:02"
 clear
