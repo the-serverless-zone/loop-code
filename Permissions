@@ -7,9 +7,12 @@
 # Setup the following 7 policies, or ask an admin to run the script.
 
 
-# CloudShell-User
+# (SZ)
 # CW-Alarm
 # CW-Logs
+
+# (YOU)
+# CloudShell-User
 # IAM-Access
 # Lambda-Access
 # S3-Access
@@ -19,30 +22,6 @@
 #  ---------------------------------------------------------------------------------------------------------
 #  POLICIES
 #  ---------------------------------------------------------------------------------------------------------
-
-
-CloudShell-User
-------------------------------------------------------
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "cloudshell:DeleteEnvironment",
-                "cloudshell:DescribeEnvironments",
-                "cloudshell:PutCredentials",
-                "cloudshell:StopEnvironment",
-                "cloudshell:CreateEnvironment",
-                "cloudshell:GetEnvironmentStatus",
-                "cloudshell:StartEnvironment",
-                "cloudshell:CreateSession"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
 
 
 CW-Alarm
@@ -84,6 +63,40 @@ CW-Logs
 		"logs:ListLogGroupsForQuery",
 		"logs:ListLogGroupsForEntity",
 		"logs:DescribeLogGroups"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+CloudShell-User
+------------------------------------------------------
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudshell:DeleteEnvironment",
+                "cloudshell:DescribeEnvironments",
+                "cloudshell:PutCredentials",
+                "cloudshell:StopEnvironment",
+                "cloudshell:CreateEnvironment",
+                "cloudshell:GetEnvironmentStatus",
+                "cloudshell:StartEnvironment",
+                "cloudshell:CreateSession"
             ],
             "Resource": "*"
         }
