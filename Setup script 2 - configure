@@ -279,7 +279,7 @@ tMinus "00:00:05"
 aws iam create-policy --policy-name log-read-P --policy-document '{"Version": "2012-10-17","Statement": [{"Sid": "VisualEditor0","Effect":"Allow","Action":["logs:GetQueryResults","logs:StartQuery","logs:DescribeLogGroups"],"Resource":"*"}]}'
 aws iam create-policy --policy-name lambda-list-P --policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"VisualEditor0","Effect":"Allow","Action":"lambda:ListFunctions","Resource":"*"}]}'
 aws iam create-policy --policy-name log-describe-P --policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"VisualEditor0","Effect":"Allow","Action":"logs:DescribeLogStreams","Resource":"*"}]}'
-aws iam create-policy --policy-name alarm-reset-P --policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"VisualEditor0","Effect":"Allow","Action":"cloudwatch:SetAlarmState","Resource":"arn:aws:cloudwatch:us-east-1::'$your_aws_account':alarm:alarm2sns"}]}'
+aws iam create-policy --policy-name alarm-reset-P --policy-document '{"Version":"2012-10-17","Statement":[{"Sid":"VisualEditor0","Effect":"Allow","Action":"cloudwatch:SetAlarmState","Resource":"arn:aws:cloudwatch:us-east-1:'$your_aws_account':alarm:alarm2sns"}]}'
 
 tMinus "00:00:05"
 
