@@ -297,14 +297,14 @@ email_address=${email_address// /}
 sms_number=${sms_number=""// /}
 slack_webhook=${slack_webhook////|}
 
-.>"bar $your_aws_account $email_address $sms_number $slack_webhook $secret_id.bar" 2>NUL
-aws s3 cp "bar $your_aws_account $email_address $sms_number $slack_webhook $secret_id.bar" s3://loop-invoke-children-$registration_number
-tMinus "00:00:10"
-
 .>"foo $your_aws_account $email_address $sms_number $slack_webhook $secret_id.foo" 2>NUL
 aws s3 cp "foo $your_aws_account $email_address $sms_number $slack_webhook $secret_id.foo" s3://loop-detector-clients-$registration_number
 tMinus "00:00:05"
 clear
+
+.>"bar $your_aws_account $email_address $sms_number $slack_webhook $secret_id.bar" 2>NUL
+aws s3 cp "bar $your_aws_account $email_address $sms_number $slack_webhook $secret_id.bar" s3://loop-invoke-children-$registration_number
+tMinus "00:00:10"
 
 # -------------------------------------------------------------------------------------------------------------------------
 # Initializing account objects - 2 minutes to complete.
