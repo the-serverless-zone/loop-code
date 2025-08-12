@@ -227,6 +227,8 @@ slack_webhook=${slack_webhook////|}
 aws s3 cp "bar $your_aws_account $email_address $sms_number $slack_webhook .bar" s3://0000-code
 
 clear
+tMinus "00:00:01"
+clear
 
 # Pre-install complete - check SMS messages on the number you supplied within the next 30 seconds 
 # ! Use the registration number in the SMS msg to launch the part 2 installer script. 
