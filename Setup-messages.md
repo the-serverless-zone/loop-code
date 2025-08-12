@@ -1,1 +1,10 @@
+#  Setup confirmation
+#  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#  SETUP COMPLETION MESSAGES
+#  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+![Alt text](https://fogbank-reporting-version-release.s3.us-east-1.amazonaws.com/three-progress-messages.png)
+
+
+
+If you do not receive either or both of these messages within 10 minutes of running script 2 - get in touch with us at zone-admin@protonmail.com 
