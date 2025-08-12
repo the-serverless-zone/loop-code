@@ -4,30 +4,7 @@
 #  SETUP COMPLETION MESSAGE
 #  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Once you have run scripts 1 
-
-    Loop+ admin msg:
-    "Registration complete"
-
-    Continue to:
-    Script 2
-
-    On the github 
-    loop-code repo
-
-
-
-After script 2 you'll get a message confirming your setup like this one:
-
-
-    Loop+ admin msg:
-    "Successful install"
-
-    Continue to:
-    Testing your system
-
-    On the github 
-    loop-code repo
+![Alt text](https://fogbank-reporting-version-release.s3.us-east-1.amazonaws.com/Logo.png)
 
 
 
