@@ -16,9 +16,9 @@ Track multiple alert targets                     Track multiple alert targets
 
 Set global alert thresholds                      Set global alert thresholds
 
-SMS text messages                                SMS text messages
+Receive SMS text messages                        Receive SMS text messages
 
-Slack channel messages                           Slack channel messages
+Get Slack channel messages                       Get Slack channel messages
 
 Email messages                                   Email messages
 
