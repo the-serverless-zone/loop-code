@@ -4,9 +4,9 @@ e
 #  TRIAL vs PAID
 #  ---------------------------------------------------------------------------------------------------------
 
+BASIC FEATURES .............................................................................................
 
 TRIAL                                            PAID             
-
 
 5-minute reponse times                           5-minute reponse times  
 
@@ -23,15 +23,15 @@ Get Slack channel messages                       Get Slack channel messages
 Email messages                                   Email messages
 
 
+ADVANCED FEATURES .............................................................................................
 
 TRIAL                                            PAID
-
 
 30 day trial                                     Unlimited rolling contract cancel anytime
 
 Single alert recipient                           Up to six SMS alert recipients, up to thirty email recipients
+
 Global invoke only                               Customize all lambda threshold levels
-                                                
-Single slack channel                             Multiple slack channels with lambda filters
+                                               
 
 
