@@ -27,12 +27,11 @@ Email messages                                   Email messages
 TRIAL                                            PAID
 
 
-Free for 2 weeks                                 One-month rolling contract
+30 day trial                                     Unlimited rolling contract cancel anytime
 
-Single user                                      Up to six SMS users, up to thirty email users
-
--                                                Customize all lambda threshold levels
+Single alert recipient                           Up to six SMS alert recipients, up to thirty email recipients
+Global invoke only                               Customize all lambda threshold levels
                                                 
-
+Single slack channel                             Multiple slack channels with lambda filters
 
 
