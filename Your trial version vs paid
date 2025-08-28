@@ -27,11 +27,6 @@ DIFFERENCES ....................................................................
 
 30-day TRIAL                                     PAID monthly but cancel any time
 
-Standard 3-5 minute alerts                       ! 60-second early general warning alert, plus 3-5 minute alerts
-
 Single alert recipient                           Up to six SMS alert recipients, up to thirty email recipients
 
-Global invoke only                               Customize all lambda threshold levels
-                                               
-USA only                                         USA and any country 
-
+Global invoke only                               Customize all lambda threshold levels                                              
