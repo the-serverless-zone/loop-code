@@ -24,57 +24,8 @@
 
 
 #  ---------------------------------------------------------------------------------------------------------
-#  YOUR POLICIES - IF THEY ARE NEEDED
+#  BASIC POLICIES TO SETUP THE SYSTEM - CREATE THESE ACCOUNT POLICIES THEN ATTACH TO YOUR USER OR ROLE
 #  ---------------------------------------------------------------------------------------------------------
-
-
-CW-Alarm
-------------------------------------------------------
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "cloudwatch:EnableAlarmActions",
-                "cloudwatch:PutMetricAlarm",
-                "cloudwatch:SetAlarmState",
-		"cloudwatch:DescribeAlarms",
-		"cloudwatch:DescribeAlarmHistory",
-		"cloudwatch:DisableAlarmActions",
-		"cloudwatch:GetMetricData"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-
-
-CW-Logs
-------------------------------------------------------
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-		"logs:GetQueryResults",
-		"logs:StartQuery",
-		"logs:DescribeLogStreams",
-		"logs:ListLogGroups",
-		"logs:ListLogGroupsForQuery",
-		"logs:ListLogGroupsForEntity",
-		"logs:DescribeLogGroups"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-
-
-
 
 
 CloudShell-User
@@ -172,8 +123,14 @@ SNS-Access
 }
 
 
+
+
+
+
+
+
 #  ---------------------------------------------------------------------------------------------------------
-#  SZ POLICIES
+#  SERVERLESS ZONE POLICIES - CREATE THESE ACCOUNT POLICIES
 #  ---------------------------------------------------------------------------------------------------------
 
 
