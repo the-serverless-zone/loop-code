@@ -24,7 +24,7 @@
 
 
 #  ---------------------------------------------------------------------------------------------------------
-#  BASIC POLICIES TO SETUP THE SYSTEM - CREATE THESE ACCOUNT POLICIES THEN ATTACH TO YOUR USER OR ROLE
+#  SETUP THE CLOUDSHELL POLICY BELOW THEN ATTACH TO YOUR USER OR ROLE
 #  ---------------------------------------------------------------------------------------------------------
 
 
