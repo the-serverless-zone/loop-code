@@ -4,7 +4,7 @@
 #  ADDING PERMISSIONS NEEDED TO RUN THE LOOP+ APPLICATION
 #  ---------------------------------------------------------------------------------------------------------
 
-# Setup the following 7 policies, or ask an admin to run the script.
+# Apart from cloudshell, script1 sets up all of these. Most of this is just for reference. 
 
 # (YOUR USER ACCOUNT)
 
