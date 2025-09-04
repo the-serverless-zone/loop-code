@@ -13,6 +13,8 @@
 #  After entering the fields, copy these and paste the whole script directly into CloudShell. The script will run immediately. 
 #  Allow five minutes for the CloudShell script to complete.
 
+clear
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  Add your details here
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
