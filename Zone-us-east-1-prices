@@ -4,6 +4,7 @@
 #  PRICING US-EAST-1 USA
 #  ---------------------------------------------------------------------------------------------------------
 
+
 TRIAL OFFER    .............................................................................................
 
 $ FREE 
@@ -22,41 +23,23 @@ Accounts with no more than 3,000 Lambda functions ... $ 50 per month includes ta
 
 
 
-PAID OFFER MULTIPLE ACCOUNTS ...............................................................................
+NEGOTIATIONS FOR PART AMOUNTS ..............................................................................
 
-Additional accounts will enjoy a 50% discount. 
+If a customer wishes to under-bid the paid prices, a certain amount of discretion may be used.
 
-Illustration one: A customer signs up for two accounts. 
-The primary account has 900 lambdas at $30/mo. The secondary account has 2,000 lambdas. 
-Therefore $30+$20 = $50 per month total cost. 
+However, the baseline of $25 per month is immutable. 
 
-Illustration two: A customer signs up for five accounts. 
-The primary account has 1200 lambdas at $40/mo. Accounts 2, 3, 4, and 5 all have less than 1,000 lambda functions. 
-Therefore $30 + (4x$15) = $90 per month total cost. 
+The vendor reserves the right to refuse low offers. 
 
 
 
-TERMS      ................................................................................................
+TERMS      .................................................................................................
 
 Prices are based on calendar month coverage.
 
 The service coverage is currently for region US-EAST-1 and country USA only. 
 
-If the customer joins mid-month and continues to submit a fee, a percentage refund will be applied to the paid charge for month 2.
-
-If the customer leaves the product contract due to a fault and has submitted a fee, a partial refund will not be granted for the days affected.
-
-If the customer leaves the product contract mid-month, and no fault is logged on AWS CloudWatch, a refund will not be granted.
-
-The trial period is a one-off period, and that covers the first thirty-one days of usage. 
-
-After the end of the trial period, a reminder for payment may be sent. 
-
-If a reminder for payment has no response within three working days, the customer account will be closed. 
-
-The customer account can be reopened once any outstanding payment is received. 
-
-Customers are able to terminate their agreement at any time. At that point, partial monthly charges will apply. 
+AWS handles all billing and refund policies. 
 
 
 
